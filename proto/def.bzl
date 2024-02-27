@@ -139,7 +139,7 @@ def _go_proto_library_impl(ctx):
         providers.extend([
             archive,
             DefaultInfo(
-                files = depset([archive.data.file]),
+                files = depset([archive.data.export_file]),
                 runfiles = archive.runfiles,
             ),
         ])
